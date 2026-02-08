@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consórcio Da Cultura | Inteligência e Dados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-culture-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #115e59 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #2dd4bf, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header Navigation -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold tracking-tighter text-slate-900">
+                        <span class="text-teal-600">DA</span>CULTURA
+                    </span>
+                    <span class="ml-2 text-[10px] uppercase tracking-widest bg-slate-100 px-2 py-1 rounded font-bold text-slate-500 hidden sm:block">Consórcio</span>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#proposito" class="hover:text-teal-600 transition">O Propósito</a>
+                    <a href="#solucoes" class="hover:text-teal-600 transition">Soluções</a>
+                    <a href="#eixos" class="hover:text-teal-600 transition">Eixos</a>
+                    <a href="#quem-somos" class="hover:text-teal-600 transition">Quem Somos</a>
+                    <a href="#participar" class="bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition">Participar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-culture-gradient text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Infraestrutura e Inteligência <span class="text-gradient">Da Cultura.</span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+                    Uma proposta colaborativa por dados, redes e inteligência coletiva para fortalecer a soberania digital da cultura brasileira.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#solucoes" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-lg text-center hover:bg-teal-50 transition">Conhecer Soluções</a>
+                    <a href="#proposito" class="px-8 py-4 border border-white/30 text-white font-bold rounded-lg text-center hover:bg-white/10 transition">Ver Manifesto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 1: O Propósito -->
+    <section id="proposito" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-slate-900">Por que o Consórcio Da Cultura?</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-lg">
+                        <p>Vivemos um tempo em que o excesso de informação convive com a escassez de orientação. A cultura brasileira pulsa em todas as direções, mas muitas vezes permanece invisível às estatísticas, às políticas públicas e às ferramentas digitais que deveriam amplificá-la.</p>
+                        <p>Em meio a tantos apagões de dados e descontinuidades institucionais, é preciso estabelecer um alicerce. Um sinal que ilumine territórios, conecte saberes e aponte caminhos compartilhados.</p>
+                        <p class="font-semibold text-teal-600 italic">O Consórcio Da Cultura nasce como essa proposta: uma iniciativa da sociedade civil e da inteligência coletiva.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <h3 class="text-xl font-bold mb-4">O momento é agora</h3>
+                    <p class="text-slate-600 mb-6 italic">"A retomada do SNIIC é um chamado à ação: o poder público não pode fazer isso sozinho."</p>
+                    <p class="text-slate-600 text-sm">Estados e municípios enfrentam desafios técnicos para manter sistemas de informação. As bases são frágeis e cadastros incompletos. Temos no Brasil um histórico rico de tecnologias livres e colaboração, o que falta é a articulação que agora propomos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Portfólio de Soluções (New) -->
+    <section id="solucoes" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Soluções Da Cultura</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto italic">O ecossistema integrado de ferramentas modulares que compõem a nossa infraestrutura.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Farol -->
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
+                <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Farol <span class="text-teal-400 font-normal">Da Cultura</span></h3>
+                <p class="text-slate-400 text-sm">Serviço de inteligência, monitoramento e curadoria de dados para orientação estratégica.</p>
+            </div>
+            <!-- Mapas -->
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Mapas <span class="text-blue-400 font-normal">Da Cultura</span></h3>
+                <p class="text-slate-400 text-sm">Plataformas de mapeamento territorial e integração de agentes e espaços culturais.</p>
+            </div>
+            <!-- Atlas -->
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
+                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Atlas <span class="text-purple-400 font-normal">Da Cultura</span></h3>
+                <p class="text-slate-400 text-sm">Visualização de indicadores e diagnósticos demográficos e sociais do setor.</p>
+            </div>
+            <!-- Dados -->
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
+                <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Dados <span class="text-amber-400 font-normal">Da Cultura</span></h3>
+                <p class="text-slate-400 text-sm">Repositório de dados abertos com foco em salvaguarda e interoperabilidade.</p>
+            </div>
+            <!-- Indicadores -->
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover md:col-span-2">
+                <div class="flex items-start gap-6">
+                    <div class="w-12 h-12 bg-rose-500 rounded-lg flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Indicadores <span class="text-rose-400 font-normal">Da Cultura</span></h3>
+                        <p class="text-slate-400 text-sm">Metodologias de avaliação de impacto, monitoramento de editais e qualificação de investimentos no setor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Do que é feito -->
+    <section id="eixos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Eixos de Atuação</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 01</h4>
+                    <h3 class="text-xl font-bold">Dados Abertos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Agregação de bases nacionais com resiliência e distribuição territorial, garantindo que nenhuma informação se perca e todas sirvam às políticas públicas.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 02</h4>
+                    <h3 class="text-xl font-bold">Serviços Digitais</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Promoção e certificação de plataformas confiáveis e interoperáveis, além da formação de gestores em cultura digital e ciência de dados.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 03</h4>
+                    <h3 class="text-xl font-bold">Governança Colaborativa</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Colaboração em rede para planejamento conjunto, com apoio de universidades, observatórios e consórcios públicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Para quem é -->
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">Para quem é essa proposta?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Gestores Públicos</h3>
+                    <p class="text-slate-600 text-center">Governos federais, estaduais e municipais que precisam de apoio técnico e estratégico para integrar-se ao SNIIC com autonomia.</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Instituições e Empresas</h3>
+                    <p class="text-slate-600 text-center">Universidades e redes de cultura digital que desejam colaborar com tecnologias, infraestrutura ou força de trabalho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Quem Somos -->
+    <section id="quem-somos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Quem Somos?</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Esta proposta não parte do zero. Ela se apoia no encontro de iniciativas consolidadas no Brasil.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 grayscale opacity-70">
+                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
+                    <span class="font-bold text-slate-800">Mapas e Prosas</span>
+                </div>
+                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
+                    <span class="font-bold text-slate-800">Instituto Mutirão</span>
+                </div>
+                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
+                    <span class="font-bold text-slate-800">Laboratório do Futuro (UFC)</span>
+                </div>
+                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
+                    <span class="font-bold text-slate-800">Edital Social</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Como Participar -->
+    <section id="participar" class="py-24 bg-teal-600 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl font-bold mb-6">Como participar?</h2>
+            <p class="text-xl text-teal-50 max-w-3xl mx-auto mb-10">
+                Estamos em fase de escuta e experimentação. Convidamos gestores, coletivos e especialistas a se somarem a este processo, contribuindo com ideias, recursos e tecnologias.
+            </p>
+            <button class="px-12 py-5 bg-white text-teal-600 font-extrabold rounded-full hover:shadow-xl transition-all transform hover:scale-105">
+                FAZER PARTE DA INICIATIVA
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-slate-900 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-12 mb-12">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-2xl font-extrabold text-white">
+                        <span class="text-teal-500">DA</span>CULTURA
+                    </span>
+                    <p class="mt-2 text-sm">Consórcio por Dados, Redes e Inteligência Cultural.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-2 text-xs">
+                    <span class="text-slate-500 uppercase font-bold mb-2">Domínios do Consórcio:</span>
+                    <a href="#" class="hover:text-white transition">da.cultura.org.br</a>
+                    <a href="#" class="hover:text-white transition">consorcio.cultura.org.br</a>
+                    <a href="#" class="hover:text-white transition">consorcio.da.cultura.org.br</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between text-xs items-center">
+                <p>&copy; 2026 Consórcio Da Cultura. Iniciativa da Sociedade Civil.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Privacidade</a>
+                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                    <a href="#" class="hover:text-white transition">Acesso à Informação</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
