@@ -20,6 +20,20 @@
             transform: translateY(-5px);
             transition: all 0.3s ease;
         }
+        
+        /* Carousel Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-track {
+            display: flex;
+            width: fit-content;
+            animation: scroll 60s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -36,8 +50,8 @@
                 </div>
                 <nav class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#proposito" class="hover:text-teal-600 transition">O Propósito</a>
+                    <a href="#missao" class="hover:text-teal-600 transition">Missão</a>
                     <a href="#solucoes" class="hover:text-teal-600 transition">Soluções</a>
-                    <a href="#eixos" class="hover:text-teal-600 transition">Eixos</a>
                     <a href="#quem-somos" class="hover:text-teal-600 transition">Quem Somos</a>
                     <a href="#participar" class="bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition">Participar</a>
                 </nav>
@@ -57,7 +71,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#solucoes" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-lg text-center hover:bg-teal-50 transition">Conhecer Soluções</a>
-                    <a href="#proposito" class="px-8 py-4 border border-white/30 text-white font-bold rounded-lg text-center hover:bg-white/10 transition">Ver Manifesto</a>
+                    <a href="#quem-somos" class="px-8 py-4 border border-white/30 text-white font-bold rounded-lg text-center hover:bg-white/10 transition">Quem Somos</a>
                 </div>
             </div>
         </div>
@@ -70,93 +84,122 @@
                 <div>
                     <h2 class="text-3xl font-bold mb-6 text-slate-900">Por que o Consórcio Da Cultura?</h2>
                     <div class="space-y-4 text-slate-600 leading-relaxed text-lg">
-                        <p>Vivemos um tempo em que o excesso de informação convive com a escassez de orientação. A cultura brasileira pulsa em todas as direções, mas muitas vezes permanece invisível às estatísticas, às políticas públicas e às ferramentas digitais que deveriam amplificá-la.</p>
-                        <p>Em meio a tantos apagões de dados e descontinuidades institucionais, é preciso estabelecer um alicerce. Um sinal que ilumine territórios, conecte saberes e aponte caminhos compartilhados.</p>
-                        <p class="font-semibold text-teal-600 italic">O Consórcio Da Cultura nasce como essa proposta: uma iniciativa da sociedade civil e da inteligência coletiva.</p>
+                        <p>Vivemos um tempo em que o excesso de informação convive com a escassez de orientação. A cultura brasileira pulsa em todas as direções, mas muitas vezes permanece invisível às estatísticas, à opinião pública e às ferramentas digitais que deveriam amplificá-la.</p>
+                        <p>Em meio a tantos apagões de dados e descontinuidades institucionais, é preciso estabelecer um alicerce. Uma referência que oriente territórios, conecte saberes e aponte caminhos compartilhados.</p>
+                        <p class="font-semibold text-teal-600 italic">O Consórcio Da Cultura nasce como essa proposta: uma iniciativa da sociedade civil e da inteligência coletiva para colaborar com a construção de uma política de dados culturais forte, confiável, resiliente e distribuída.</p>
                     </div>
                 </div>
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                     <h3 class="text-xl font-bold mb-4">O momento é agora</h3>
-                    <p class="text-slate-600 mb-6 italic">"A retomada do SNIIC é um chamado à ação: o poder público não pode fazer isso sozinho."</p>
-                    <p class="text-slate-600 text-sm">Estados e municípios enfrentam desafios técnicos para manter sistemas de informação. As bases são frágeis e cadastros incompletos. Temos no Brasil um histórico rico de tecnologias livres e colaboração, o que falta é a articulação que agora propomos.</p>
+                    <p class="text-slate-600 mb-6 italic">"O poder público não pode fazer isso sozinho."</p>
+                    <p class="text-slate-600 text-sm mb-4">O Ministério da Cultura anunciou a retomada do SNIIC como estratégia prioritária para qualificar a gestão pública e fortalecer a cooperação federativa.</p>
+                    <p class="text-slate-600 text-sm">Estados e municípios enfrentam desafios técnicos e estruturais. Bases de dados frágeis e cadastros incompletos limitam a gestão. No Brasil, temos um histórico riquíssimo de tecnologias livres e redes de colaboração. O Consórcio Da Cultura é o elo de articulação que faltava.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção 4: Portfólio de Soluções (New) -->
+    <!-- Seção: Nossa Missão -->
+    <section id="missao" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">O que propomos</h2>
+                <p class="text-slate-500 italic">Nossa missão é estruturada em três pilares fundamentais de suporte à cultura nacional:</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mb-6 font-bold">01</div>
+                    <h3 class="text-lg font-bold mb-3">Sistema Nacional, Pacto Federativo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Oferecer suporte técnico e metodológico a gestores culturais em todo o país, garantindo a integração de dados independente das tecnologias utilizadas.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 font-bold">02</div>
+                    <h3 class="text-lg font-bold mb-3">Salvaguarda e Interoperabilidade</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Assegurar a padronização, redundância e a memória dos dados culturais brasileiros, mitigando riscos de apagões ou mudanças bruscas de governo.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-6 font-bold">03</div>
+                    <h3 class="text-lg font-bold mb-3">Controle Social Qualificado</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Promover a colaboração entre Governos e Sociedade Civivl, para a formulação e monitoramento de políticas de informações e indicadores culturais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Portfólio de Soluções -->
     <section id="solucoes" class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 class="text-4xl font-bold mb-4">Soluções Da Cultura</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto italic">O ecossistema integrado de ferramentas modulares que compõem a nossa infraestrutura.</p>
+            <p class="text-slate-400 max-w-2xl mx-auto italic">O ecossistema integrado de ferramentas e serviços que compõem a nossa infraestrutura tecnológica.</p>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Farol -->
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
                 <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Farol <span class="text-teal-400 font-normal">Da Cultura</span></h3>
-                <p class="text-slate-400 text-sm">Serviço de inteligência, monitoramento e curadoria de dados para orientação estratégica.</p>
+                <p class="text-slate-400 text-sm">Inteligência, monitoramento e curadoria de dados para orientação estratégica e territorial.</p>
             </div>
-            <!-- Mapas -->
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
                 <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Mapas <span class="text-blue-400 font-normal">Da Cultura</span></h3>
-                <p class="text-slate-400 text-sm">Plataformas de mapeamento territorial e integração de agentes e espaços culturais.</p>
+                <p class="text-slate-400 text-sm">Plataformas de mapeamento territorial e integração de agentes, espaços e eventos.</p>
             </div>
-            <!-- Atlas -->
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
                 <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Atlas <span class="text-purple-400 font-normal">Da Cultura</span></h3>
-                <p class="text-slate-400 text-sm">Visualização de indicadores e diagnósticos demográficos e sociais do setor.</p>
+                <p class="text-slate-400 text-sm">Visualização de indicadores e diagnósticos sociais e demográficos profundos do setor.</p>
             </div>
-            <!-- Dados -->
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
                 <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Dados <span class="text-amber-400 font-normal">Da Cultura</span></h3>
-                <p class="text-slate-400 text-sm">Repositório de dados abertos com foco em salvaguarda e interoperabilidade.</p>
+                <p class="text-slate-400 text-sm">Repositório de dados abertos com foco em salvaguarda, memória e interoperabilidade.</p>
             </div>
-            <!-- Indicadores -->
-            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover md:col-span-2">
-                <div class="flex items-start gap-6">
-                    <div class="w-12 h-12 bg-rose-500 rounded-lg flex-shrink-0 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Indicadores <span class="text-rose-400 font-normal">Da Cultura</span></h3>
-                        <p class="text-slate-400 text-sm">Metodologias de avaliação de impacto, monitoramento de editais e qualificação de investimentos no setor.</p>
-                    </div>
+            <div class="p-8 rounded-2xl bg-white/5 border border-white/10 card-hover">
+                <div class="w-12 h-12 bg-rose-500 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                 </div>
+                <h3 class="text-xl font-bold mb-2">Indicadores <span class="text-rose-400 font-normal">Da Cultura</span></h3>
+                <p class="text-slate-400 text-sm">Metodologias de avaliação de impacto e monitoramento de investimentos culturais.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-white/10 border border-teal-500/30 card-hover shadow-lg shadow-teal-500/5 text-teal-50">
+                <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Serviços <span class="text-teal-400 font-normal">Da Cultura</span></h3>
+                <p class="text-teal-100/70 text-sm">Consultoria técnica, formação para gestores e suporte à implementação de sistemas locais.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção: Do que é feito -->
+    <!-- Seção: Do que é feito (Eixos) -->
     <section id="eixos" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Eixos de Atuação</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">Eixos de Atuação</h2>
+                <p class="text-slate-500 italic">Tecnologias e metodologias compartilhadas para promover a Inteligência Cultural:</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="space-y-4">
                     <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 01</h4>
                     <h3 class="text-xl font-bold">Dados Abertos</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Agregação de bases nacionais com resiliência e distribuição territorial, garantindo que nenhuma informação se perca e todas sirvam às políticas públicas.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Agregação de bases de dados nacionais com resiliência, atualização constante e distribuição territorial, de forma a garantir que nenhuma informação se perca — e que todas estejam a serviço das políticas públicas.</p>
                 </div>
                 <div class="space-y-4">
                     <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 02</h4>
                     <h3 class="text-xl font-bold">Serviços Digitais</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Promoção e certificação de plataformas confiáveis e interoperáveis, além da formação de gestores em cultura digital e ciência de dados.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Promoção e certificação de serviços e plataformas digitais, garantindo que sejam confiáveis e interoperáveis, assim como promover a formação e qualificação de gestores em cultura digital e ciência de dados.</p>
                 </div>
                 <div class="space-y-4">
                     <h4 class="font-bold text-teal-600 uppercase text-xs tracking-widest">Eixo 03</h4>
                     <h3 class="text-xl font-bold">Governança Colaborativa</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Colaboração em rede para planejamento conjunto, com apoio de universidades, observatórios e consórcios públicos.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Criação de mecanismos de colaboração em rede para planejamento conjunto e escuta qualificada, com apoio de universidades, observatórios culturais, redes comunitárias e consórcios públicos.</p>
                 </div>
             </div>
         </div>
@@ -172,34 +215,194 @@
                     <p class="text-slate-600 text-center">Governos federais, estaduais e municipais que precisam de apoio técnico e estratégico para integrar-se ao SNIIC com autonomia.</p>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Instituições e Empresas</h3>
-                    <p class="text-slate-600 text-center">Universidades e redes de cultura digital que desejam colaborar com tecnologias, infraestrutura ou força de trabalho.</p>
+                    <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Instituições Tecnológicas</h3>
+                    <p class="text-slate-600 text-center">Universidades, Empresas e Organizações da Sociedade Civil que desejam colaborar com tecnologias, infraestrutura ou força de trabalho.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção: Quem Somos -->
-    <section id="quem-somos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Quem Somos?</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Esta proposta não parte do zero. Ela se apoia no encontro de iniciativas consolidadas no Brasil.</p>
+    <!-- Seção: Quem Somos (Com Carrossel de Parceiros e Logos 1:1) -->
+    <section id="quem-somos" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">Quem Somos?</h2>
+            <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                Uma coalizão de instituições que une capacidade técnica, densidade política e rigor acadêmico, formada inicialmente por:
+            </p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative w-full">
+            <div class="carousel-track">
+                <!-- Lista de Parceiros com Figuras de Marcação 1:1 -->
+                <div class="flex items-start">
+                    <!-- Template Item do Parceiro -->
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Mutirão</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Movimento FeliciLab</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Laboratório do Futuro (UFC)</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Fluir</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">RedeInova Tecnologia</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Dragão do Mar</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Funarte</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Prosas</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Cultural Iracema</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Suricate Mídia Nordestina</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Apoa.se</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Fix Tecnologia</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Rede Mapas</span>
+                    </div>
+                </div>
+
+                <!-- Cópia exata para o efeito de continuidade (Loop) -->
+                <div class="flex items-start">
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Mutirão</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Movimento FeliciLab</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Laboratório do Futuro (UFC)</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Fluir</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">RedeInova Tecnologia</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Dragão do Mar</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Funarte</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Prosas</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Instituto Cultural Iracema</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Suricate Mídia Nordestina</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Apoa.se</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Fix Tecnologia</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-3 mx-8 w-40">
+                        <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden">
+                            <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 text-center uppercase tracking-wider leading-tight">Rede Mapas</span>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 grayscale opacity-70">
-                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
-                    <span class="font-bold text-slate-800">Mapas e Prosas</span>
-                </div>
-                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
-                    <span class="font-bold text-slate-800">Instituto Mutirão</span>
-                </div>
-                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
-                    <span class="font-bold text-slate-800">Laboratório do Futuro (UFC)</span>
-                </div>
-                <div class="flex flex-col items-center p-4 border border-slate-100 rounded-lg">
-                    <span class="font-bold text-slate-800">Edital Social</span>
-                </div>
-            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 mt-12 text-center text-slate-500 text-sm">
+            Nossa proposta é conectar estas iniciativas sob a marca <strong>Da Cultura</strong>, oferecendo sustentação a longo prazo para o ecossistema cultural brasileiro.
         </div>
     </section>
 
@@ -209,10 +412,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-4xl font-bold mb-6">Como participar?</h2>
             <p class="text-xl text-teal-50 max-w-3xl mx-auto mb-10">
-                Estamos em fase de escuta e experimentação. Convidamos gestores, coletivos e especialistas a se somarem a este processo, contribuindo com ideias, recursos e tecnologias.
+                Estamos a organizar um processo de escuta, mobilização e experimentação. Convidamos gestores, instituições e coletivos a contribuírem com ideias, recursos e tecnologias.
             </p>
             <button class="px-12 py-5 bg-white text-teal-600 font-extrabold rounded-full hover:shadow-xl transition-all transform hover:scale-105">
-                FAZER PARTE DA INICIATIVA
+                FAZER PARTE DESTA INICIATIVA
             </button>
         </div>
     </section>
@@ -225,20 +428,20 @@
                     <span class="text-2xl font-extrabold text-white">
                         <span class="text-teal-500">DA</span>CULTURA
                     </span>
-                    <p class="mt-2 text-sm">Consórcio por Dados, Redes e Inteligência Cultural.</p>
+                    <p class="mt-2 text-sm italic">Consórcio por Dados, Redes e Inteligência Cultural.</p>
                 </div>
-                <div class="grid grid-cols-1 gap-2 text-xs">
-                    <span class="text-slate-500 uppercase font-bold mb-2">Domínios do Consórcio:</span>
+                <div class="grid grid-cols-1 gap-2 text-xs text-right">
+                    <span class="text-slate-500 uppercase font-bold mb-2">Pontos de Acesso:</span>
                     <a href="#" class="hover:text-white transition">da.cultura.org.br</a>
                     <a href="#" class="hover:text-white transition">consorcio.cultura.org.br</a>
                     <a href="#" class="hover:text-white transition">consorcio.da.cultura.org.br</a>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between text-xs items-center">
-                <p>&copy; 2026 Consórcio Da Cultura. Iniciativa da Sociedade Civil.</p>
+                <p>&copy; 2026 Consórcio Da Cultura. Uma iniciativa da sociedade civil e inteligência coletiva.</p>
                 <div class="mt-4 md:mt-0 flex space-x-6">
                     <a href="#" class="hover:text-white transition">Privacidade</a>
-                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                    <a href="#" class="hover:text-white transition">Soberania Digital</a>
                     <a href="#" class="hover:text-white transition">Acesso à Informação</a>
                 </div>
             </div>
